@@ -37,6 +37,23 @@
             .d-none {
                 display: none;
             }
+            .location {
+                text-decoration: none;
+                color: black;
+                font-size: 20px;
+                margin: 10px;
+                list-style: none;
+            }
+            .navber {
+                display: flex;
+                background: #f0f0f0;
+                padding: 10px;
+                margin: 0;
+            }
+            .navber-item {
+                list-style: none;
+                width: 25%;
+            }
         </style>
     </head>
     <body>
@@ -45,17 +62,17 @@
             <h1 class="title"><span class="ict">3PGICT研修</span>レスポンシブデザインを学ぼう!!!</h1>
         </div>
         <ul class="navber">
-            <li>
-                <a href="#profile" class="location">自己紹介</a>
+            <li class="navber-item">
+                <a href="#profile" class="location">WEBサイト見るデバイス</a>
             </li>
-            <li>
-                <a href="#web" class="location">制作物</a>
+            <li class="navber-item">
+                <a href="#web" class="location">レスポンシブデザインとは？</a>
             </li>
-            <li>
-                <a href="#skill" class="location">スキル</a>
+            <li class="navber-item">
+                <a href="#skill" class="location">メディアクエリ</a>
             </li>
-            <li>
-                <a href="#kentei" class="location">持っている資格</a>
+            <li class="navber-item">
+                <a href="#kentei" class="location">レスポンシブデザインの実践</a>
             </li>
         </ul>
         <div class="contents">
@@ -74,18 +91,66 @@
                 <li>その他（ゲーム機など）</li>
             </ul>
             <p>Q2. それぞれの画面サイズはどのようになっているでしょうか？</p>
-            <p>実践1⃣ このサイトを横向きにして見てみよう！</p>
+            <p>画面サイズは、デバイスごとに異なる。</p>
+            <p>その時の表示について考えてみよう！</p>
+            <p>実践1⃣ このサイトを横向きにして見てみよう！</p>   
             <p>実践2⃣ このサイトを縦向きにして見てみよう！</p>
         </div>
         <div class="contents contents3">
             <h2>レスポンシブデザインとは？</h2>
-            <p>レスポンシブデザインとは、PC、タブレット、スマートフォンなど、様々な画面サイズに応じて、じレイアウトや表示を最適化するデザイン手法のことです。</p>
-            <p>レスポンシブデザインを採用することで、ユーザーはどのデバイスからでも快適にWEBサイトを閲覧できるようになります。</p>
-            <p>メリット1⃣ ユーザーエクスペリエンスの向上</p>
-            <p>メリット2⃣ SEO効果の向上</p>
-            <p>メリット3⃣ 管理コストの削減</p>
+            <img src="https://4a3btzgslag1w7ue.public.blob.vercel-storage.com/responsive/ChatGPT%20Image%202025%E5%B9%B411%E6%9C%885%E6%97%A5%2011_48_57.png" alt="レスポンシブデザイン">
+            <p>パソコン、スマホ、タブレット、どのデバイスで見るかによって画面サイズが変わるため、それぞれに合わせたデザインにする必要がある。</p>
+            <p>見ているデバイスの画面サイズに応じて、自動的に最適化したデザインを表示する手法。</p>
         </div>
         <div class="contents contents4">
-            <h2>HTMLを修正してレスポンシブデザインを体験しよう！！</h2>
-            <a href="./resuponse.text" download>このサイトのHTMLファイルをダウンロードする。</a>
+            <h2>メディアクエリとは？</h2>
+            <p>特定の大きさの時のみにＣＳＳ適応することができるCSSの書き方。</p>
+            <h3>PCファースト方式</h3>
+            <p>PCを基準として、スマホやタブレットサイズのみを変える箇所を修正する。</p>
+            <h3>モバイルファースト方式</h3>
+            <p>スマホを基準として、PCやタブレットのみを変える箇所を修正する。</p>
+            <h3>特定の画面以下のサイズの時のみCSSを適用する</h3>
+            <h4>例：800px以下の画面の時に contents クラスの幅を50pxにする</h4>
+            <pre>
+                <code>
+                    @media screen and (max-width: 800px) {
+                        .contents {
+                            width: 50px;
+                        }
+                    }
+                </code>
+            </pre>
+            <h3>特定の画面以下のサイズの時のみCSSを適用する</h3>
+            <h4>例：800px以下の画面の時に contents クラスの幅を50pxにする</h4>
+            <pre>
+                <code>
+                    @media screen and (max-width : 600px) {
+                        .contents {
+                            width: 100px;
+                        }
+                    }
+                </code>
+            </pre>
         </div>
+        <div class="contents contents5">
+            <h2>HTMLを修正してレスポンシブデザインを体験しよう！！</h2>
+            <a href="./resuponse.text" target="_blank">このサイトのHTMLのソースを見る</a>
+            <ul>
+                <li>手順１: Liquid Logicのアプリを開く</li>
+                <li>手順２:新規ファイルの拡張子を.htmlに変更する</li>
+                <li>手順３:「このサイトのHTMLのソースを見る」のリンクを踏み</li>
+                <li>手順4：表示されたコードをコピーする</li>
+                <li>手順5：Liquid Logicのエディタに貼り付ける</li>
+                <li>手順6：Previewを押す</li>
+                <li>手順7:ファイルを修正して、再度Previewを押す。</li>
+            </ul>
+        </div>
+
+        <script type="text/javascript">
+            let a1 = document.getElementById("answer-1");
+            document.getElementById("kaitou-1").addEventListener("click", (e) => {
+                a1.classList.toggle("d-none");
+            });
+        </script>
+    </body>
+</html>
