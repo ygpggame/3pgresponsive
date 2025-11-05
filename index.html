@@ -79,14 +79,13 @@
                 <a href="#kentei" class="location">授業の振り返り</a>
             </li>
         </ul>
-        <div class="contents">
+        <div class="img-contents">
             <img src="https://4a3btzgslag1w7ue.public.blob.vercel-storage.com/responsive/%E3%83%87%E3%83%90%E3%82%A4%E3%82%B9%E3%81%A7%E8%A6%8B%E3%82%8B%E3%83%AC%E3%82%B9%E3%83%9D%E3%83%B3%E3%82%B7%E3%83%96%E3%82%A6%E3%82%A7%E3%83%96%E3%82%B5%E3%82%A4%E3%83%88.png" alt="" class="res-img">
         </div>
-        
-        <div class="contents contents2">
+        <div class="contents contents2" id="dunyuu">
             <h2>授業の導入</h2>
             <p>Q1. 普段、皆さんは、WEBサイトを利用する時は、何を使って見るでしょうか？</p>
-            <button id="kaitou-1">例を見る</button>
+            <button id="kaitou-1">回答例を見る</button>
             <ul class="answer-list-1 d-none" id="answer-1">
                 <li>ノートパソコン</li>
                 <li>デスクトップパソコン</li>
@@ -95,10 +94,13 @@
                 <li>その他（ゲーム機など）</li>
             </ul>
             <p>Q2. それぞれの画面サイズはどのようになっているでしょうか？</p>
-            <p>画面サイズは、デバイスごとに異なる。</p>
-            <p>その時の表示について考えてみよう！</p>
-            <p>実践1⃣ このサイトを横向きにして見てみよう！</p>   
-            <p>実践2⃣ このサイトを縦向きにして見てみよう！</p>
+            <button id="kaitou-2">回答例を見る</button>
+            <div class="answer-list-2 d-none" id="answer-2">
+                <p>画面サイズは、デバイスごとに異なる。</p>
+                <p>その時の表示について考えてみよう！</p>
+                <p>実践1⃣ このサイトを横向きにして見てみよう！</p>   
+                <p>実践2⃣ このサイトを縦向きにして見てみよう！</p>
+            </div>
         </div>
         <div class="contents contents3">
             <h2>レスポンシブデザインとは？</h2>
@@ -153,13 +155,17 @@
         <div class="contents contents6">
             <h2>授業の振り返り</h2>
             <h3>今日の授業の感想を以下のフォームから入力をお願いします。</h3>
-            <a href="" target="_blank">授業の振り返りフォーム</a>
+            <a href="https://forms.gle/uKcJG9nsntHroqs6A" target="_blank">授業の振り返りフォーム</a>
         </div>
 
         <script type="text/javascript">
             let a1 = document.getElementById("answer-1");
             document.getElementById("kaitou-1").addEventListener("click", (e) => {
                 a1.classList.toggle("d-none");
+            });
+            let a2 = document.getElementById("answer-2");
+            document.getElementById("kaitou-2").addEventListener("click", (e) => {
+                a2.classList.toggle("d-none");
             });
         </script>
     </body>
