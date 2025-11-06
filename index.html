@@ -11,7 +11,15 @@
                 font-family: Arial, sans-serif;
             }
             h2 {
+                margin: 20px 0;
+                font-size: 36px;
+            }
+            h3 {
                 margin: 10px 0;
+                font-size: 30px;
+            }
+            p {
+                font-size: 26px;
             }
             .res-img {
                 width: 50%;
@@ -44,7 +52,7 @@
             .location {
                 text-decoration: none;
                 color: black;
-                font-size: 16px;
+                font-size: 26px;
                 margin: 10px;
                 list-style: none;
             }
@@ -77,6 +85,77 @@
             .img-contents {
                 margin: 0;
             }
+            .ap-img {
+                width: 380px;
+            }
+            .t-contents {
+                display: flex;
+            }
+            .migi {
+                margin: 200px 20px;
+            }
+            .janken-contents {
+                margin-bottom: 30px;
+                background: wheat;
+            }
+            .fileopen {
+                background: lightblue;
+                padding: 10px;
+            }
+            .question {
+                font-size: 20px;
+            }
+            .answer-list {
+                font-size: 20px;
+                color: red;
+            }
+            .content-body {
+                margin-left: 20px;
+            }
+            .t-contents {
+                margin-left: 25px;
+            }
+            .tateyoko {
+                background: beige;
+            }
+            .res-text {
+                padding: 25px;
+            }
+            .contents4 {
+                background: cadetblue;
+                color: white;
+            }
+            .answer {
+                border-radius: 30%;
+                width: 200px;
+                height: 50px;
+                font-size: 26px;
+            }
+            .answer-list li {
+                font-size:26px;
+            }
+            .code-text {
+                font-size: 26px;
+                color: #000;
+            }
+            .code {
+                background: white;
+            }
+            .description li {
+                font-size: 26px;
+            }
+            .ipad {
+                background: bisque;
+            }
+            .ap-img {
+                margin: 10px;
+            }
+            .jissen {
+                background: lightpink;
+            }
+            .furikaeri {
+                background: darkseagreen;
+            }
         </style>
     </head>
     <body>
@@ -89,10 +168,16 @@
                 <a href="#dunyuu" class="location">授業の導入</a>
             </li>
             <li class="navber-item">
+                <a href="#tateyoko" class="location">縦横の切り替え</a>
+            </li>
+            <li class="navber-item">
                 <a href="#respo" class="location">レスポンシブとは？</a>
             </li>
             <li class="navber-item">
-                <a href="#media" class="location">メディアクエリ</a>
+                <a href="#media" class="location">メディアクエリとは？</a>
+            </li>
+            <li class="navber-item">
+                <a href="#ipad" class="location">IPadのHTMLファイル修正方法</a>
             </li>
             <li class="navber-item">
                 <a href="#jissen" class="location">レスポンシブの実践</a>
@@ -100,28 +185,60 @@
             <li class="navber-item">
                 <a href="#furikaeri" class="location">授業の振り返り</a>
             </li>
+
         </ul>
         <div class="img-contents">
             <img src="https://4a3btzgslag1w7ue.public.blob.vercel-storage.com/responsive/%E3%83%87%E3%83%90%E3%82%A4%E3%82%B9%E3%81%A7%E8%A6%8B%E3%82%8B%E3%83%AC%E3%82%B9%E3%83%9D%E3%83%B3%E3%82%B7%E3%83%96%E3%82%A6%E3%82%A7%E3%83%96%E3%82%B5%E3%82%A4%E3%83%88.png" alt="" class="m-img">
         </div>
         <div class="contents contents2" id="dunyuu">
             <h2>授業の導入</h2>
-            <p>Q1. 普段、皆さんは、WEBサイトを利用する時は、何を使って見るでしょうか？</p>
-            <button id="kaitou-1">回答例を見る</button>
-            <ul class="answer-list-1 d-none" id="answer-1">
-                <li>ノートパソコン</li>
-                <li>デスクトップパソコン</li>
-                <li>スマートフォン</li>
-                <li>タブレット</li>
-                <li>その他（ゲーム機など）</li>
-            </ul>
-            <p>Q2. それぞれの画面サイズはどのようになっているでしょうか？</p>
-            <button id="kaitou-2">回答例を見る</button>
-            <div class="answer-list-2 d-none" id="answer-2">
-                <p>画面サイズは、デバイスごとに異なる。</p>
-                <p>その時の表示について考えてみよう！</p>
-                <p>実践1⃣ このサイトを横向きにして見てみよう！</p>   
-                <p>実践2⃣ このサイトを縦向きにして見てみよう！</p>
+            <div class="content-body">
+                <p class="question">問1. 普段、皆さんは、WEBサイトを利用する時は、何を使って見るでしょうか？</p>
+                <button class="answer" value="1">回答例を見る</button>
+                <ul class="answer-list d-none">
+                    <li>ノートパソコン</li>
+                    <li>デスクトップパソコン</li>
+                    <li>スマートフォン</li>
+                    <li>タブレット</li>
+                    <li>その他（ゲーム機など）</li>
+                </ul>
+                <p class="question">問2. それぞれの画面サイズはどのようになっているでしょうか？</p>
+                <button class="answer" value="2">回答例を見る</button>
+                <ul class="answer-list d-none">
+                    <li>画面サイズは、デバイスごとに異なる</li>
+                    <li>デスクトップ ＞ ノートパソコン ＞ タブレット ＞ スマートフォン</li>
+                </ul>
+            </div>
+        </div>
+        <div class="tateyoko contents" id="tateyoko">
+            <h2>このサイトの縦横を切り替えよう！</h2>
+            <div class="content-body">
+                <p>実践1. このサイトを縦と横を見比べてみよう！</p> 
+                <h3>縦横の切り替え方法</h3>
+                <p>右上の指でタッチして斜め下に降ろす。</p>
+                <div class="t-contents">
+                    <div class="tate">
+                        <p>縦画面</p>
+                        <img src="https://4a3btzgslag1w7ue.public.blob.vercel-storage.com/responsive/tateyoko.png" alt="" class="ap-img">
+                    </div>
+                    <p class="migi">⇒</p>
+                    <div class="yoko">
+                        <p>横画面</p>
+                        <img src="https://4a3btzgslag1w7ue.public.blob.vercel-storage.com/responsive/yoko.png" alt="" class="ap-img">
+                    </div>
+                </div>
+                <p class="question">問3. 縦、横で切り替えた時に表示はどのようになりましたか？</p>
+                <button class="answer" value="3">回答例を見る</button>
+                <ul class="answer-list d-none">
+                    <li>横の時が綺麗でない表示になっている</li>
+                    <li>見辛く分かりにく表示である。</li>
+                </ul>
+                <p class="question">問4. どの様にすれば画面幅が変わっても綺麗になるでしょうか？</p>
+                <button class="answer" value="4">回答例を見る</button>
+                <ul class="answer-list d-none">
+                    <li>CSSで%(親要素に対しての大きさの指定方法), vw,vh(画面に対しての大きさの指定方法)を使う。</li>
+                    <li>レスポンシブデザインを用いる</li>
+                </ul>
             </div>
         </div>
         <div class="contents contents3" id="respo">
@@ -136,63 +253,78 @@
         </div>
         <div class="contents contents4" id="media">
             <h2>メディアクエリとは？</h2>
-            <p>特定の大きさの時のみにＣＳＳ適応することができるCSSの書き方。</p>
-            <h3>PCファースト方式</h3>
-            <p>PCを基準として、スマホやタブレットサイズのみを変える箇所を修正する。</p>
-            <h3>モバイルファースト方式</h3>
-            <p>スマホを基準として、PCやタブレットのみを変える箇所を修正する。</p>
-            <h3>特定の画面以下のサイズの時のみCSSを適用する</h3>
-            <h4>例：800px以下の画面の時に contents クラスの幅を50pxにする</h4>
-            <pre>
-                <code>
-                    @media screen and (max-width: 800px) {
-                        .contents {
-                            width: 50px;
-                        }
-                    }
-                </code>
-            </pre>
-            <h3>特定の画面以下のサイズの時のみCSSを適用する</h3>
-            <h4>例：800px以下の画面の時に contents クラスの幅を50pxにする</h4>
-            <pre>
-                <code>
-                    @media screen and (min-width : 600px) {
-                        .contents {
-                            width: 100px;
-                        }
-                    }
-                </code>
-            </pre>
+            <div class="content-body">
+                <p>特定の大きさの時のみにＣＳＳ適応することができるCSSの書き方。</p>
+                <h3>PCファースト方式</h3>
+                <p>PCを基準として、スマホやタブレットサイズのみを変える箇所を修正する。</p>
+                <h3>モバイルファースト方式</h3>
+                <p>スマホを基準として、PCやタブレットのみを変える箇所を修正する。</p>
+                <h3>特定の画面以下のサイズの時のみCSSを適用する</h3>
+                <p>例：800px以下の画面の時に contents クラスの幅を50pxにする</p>
+                <pre class="code">
+                    <code class="code-text">
+    @media screen and (max-width: 800px) {
+        .contents {
+                width: 50px;
+        }
+    }
+                    </code>
+                </pre>
+                <h3>特定の画面以下のサイズの時のみCSSを適用する</h3>
+                <p>例：800px以下の画面の時に contents クラスの幅を50pxにする</p>
+                <pre class="code">
+                    <code class="code-text">
+    @media screen and (max-width : 600px) {
+        .contents {
+            width: 100px;
+        }
+    }
+                    </code>
+                </pre>
+            </div>
         </div>
-        <div class="contents contents5" id="jissen">
-            <h2>HTMLを修正してレスポンシブデザインを体験しよう！！</h2>
-            <a href="./resuponse.html" download>
-                <p>このサイトのHTMLをダウンロードする</p>
-            </a>
-            <a href="./restext.text" target="_blank">このサイトのHTMLのソースを見る</a>
-            <ul>
-                <li>手順１:「このサイトのHTMLをダウンロードする」のリンクを押す。</li>
-                <li>手順２: Liquid Logicのアプリを開く。</li>
-                <li>手順３：Liquid Logicのアプリでダウンロードしたファイルを開く。</li>
-                <li>手順４：Previewを押す。</li>
-                <li>手順５:ファイルを修正して、再度Previewを押す。</li>
-            </ul>
+        <div class="contents ipad" id="ipad">
+            <h2>IPadでHTMLファイルを修正する方法</h2>
+            <div class="content-body">
+                <a href="./resuponse.html" download>
+                    <p>このサイトのHTMLをダウンロードする</p>
+                </a>
+                <a href="./restext.text" target="_blank">
+                    <p>このサイトのHTMLのソースを見る</p>
+                </a>
+                <ul class="description">
+                    <li>手順１:「このサイトのHTMLをダウンロードする」のリンクを押す。</li>
+                    <li>手順２: Liquid Logicのアプリを開く。</li>
+                    <img src="https://4a3btzgslag1w7ue.public.blob.vercel-storage.com/responsive/%E3%82%A2%E3%83%97%E3%83%AA%E5%A0%B4%E6%89%80.png" alt="" class="ap-img">
+                    <li>手順３：Liquid Logicのアプリでダウンロードしたファイルを開く。</li>
+                    <img src="https://4a3btzgslag1w7ue.public.blob.vercel-storage.com/responsive/fileopenstart.png" alt="" class="ap-img">
+                    <img src="https://4a3btzgslag1w7ue.public.blob.vercel-storage.com/responsive/fileopen2.png" alt="" class="ap-img">
+                    <li>手順４：Previewを押す。</li>
+                    <img src="https://4a3btzgslag1w7ue.public.blob.vercel-storage.com/responsive/preview.png" alt="" class="ap-img">
+                    <li>手順５:ファイルを修正して、再度Previewを押す。</li>
+                </ul>
+            </div>
         </div>
-        <div class="contents contents6" id="furikaeri">
+        <div class="contents jissen" id="jissen">
+            <h2>レスポンシブデザインを実践しよう</h2>
+        </div>
+        <div class="contents furikaeri" id="furikaeri">
             <h2>授業の振り返り</h2>
             <h3>今日の授業の感想を以下のフォームから入力をお願いします。</h3>
-            <a href="https://forms.gle/uKcJG9nsntHroqs6A" target="_blank">授業の振り返りフォーム</a>
+            <a href="https://forms.gle/uKcJG9nsntHroqs6A" target="_blank">
+                <p>授業の振り返りフォーム</p>
+            </a>
         </div>
-
+        
         <script type="text/javascript">
-            let a1 = document.getElementById("answer-1");
-            document.getElementById("kaitou-1").addEventListener("click", (e) => {
-                a1.classList.toggle("d-none");
-            });
-            let a2 = document.getElementById("answer-2");
-            document.getElementById("kaitou-2").addEventListener("click", (e) => {
-                a2.classList.toggle("d-none");
-            });
+            let answers = document.getElementsByClassName("answer");
+            let answerLists = document.getElementsByClassName("answer-list");
+            for (i=0; i< answers.length; i++) {
+                answers[i].addEventListener("click", (e) => {
+                    answerLists[e.target.value - 1].classList.toggle("d-none");
+
+                });
+            }
         </script>
     </body>
 </html>
