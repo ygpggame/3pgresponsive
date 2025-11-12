@@ -140,10 +140,10 @@
                 border-radius: 30%;
                 width: 200px;
                 height: 50px;
-                font-size: 26px;
+                font-size: 24px;
             }
             .answer-list li {
-                font-size:26px;
+                font-size:24px;
             }
             .code-text {
                 font-size: 26px;
@@ -166,6 +166,48 @@
             }
             .furikaeri {
                 background: darkseagreen;
+            }
+            .question {
+                margin: 10px;
+            }
+            /* ①コメントアウト解除をする */
+            @media screen and (min-width: 1024px) {
+                .title {
+                    margin-left: 140px;
+                    color: red;
+                }
+                .header {
+                    width: 100%;
+                    background: blue;
+                }
+                .location {
+                    font-size: 14px;
+                }
+                .navber {
+                    height: 20px;
+                }
+                .m-img {
+                    width: 100%;
+                    margin-right: 25px;
+                }
+                .img-contents {
+                    width: 50%;
+                }
+                .j-title {
+                    margin: 0;
+                }
+                .ans-1 {
+                    position: absolute;
+                    right: 0;
+                    top: 35%;
+                    background: wheat;
+                }
+                .ans-2 {
+                    position: absolute;
+                    right: 0;
+                    top: 60%;
+                    background: wheat;
+                }
             }
         </style>
     </head>
@@ -213,7 +255,7 @@
             <div class="content-body">
                 <p class="question">問1. 普段、皆さんは、WEBサイトを利用する時は、何を使って見るでしょうか？</p>
                 <button class="answer" value="1">回答例を見る</button>
-                <ul class="answer-list d-none">
+                <ul class="answer-list d-none ans-1">
                     <li>ノートパソコン</li>
                     <li>デスクトップパソコン</li>
                     <li>スマートフォン</li>
@@ -222,7 +264,7 @@
                 </ul>
                 <p class="question">問2. それぞれの画面サイズはどのようになっているでしょうか？</p>
                 <button class="answer" value="2">回答例を見る</button>
-                <ul class="answer-list d-none">
+                <ul class="answer-list d-none ans-2">
                     <li>画面サイズは、デバイスごとに異なる</li>
                     <li>デスクトップ ＞ ノートパソコン ＞ タブレット ＞ スマートフォン</li>
                 </ul>
