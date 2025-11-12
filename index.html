@@ -44,12 +44,13 @@
                 color: yellow;
                 margin-left: 50px;
                 font-size: 36px;
+                margin-top: 0;
             }
             .ict {
                 color: whitesmoke;
                 font-size: 20px;
-                line-height: 50px;
-                vertical-align: middle;
+                line-height: 25px;
+                text-align: center;
             }
             .d-none {
                 display: none;
@@ -57,9 +58,10 @@
             .location {
                 text-decoration: none;
                 color: black;
-                font-size: 26px;
-                margin: 10px;
+                font-size: 23px;
+                padding: 10px;
                 list-style: none;
+                border: 1px solid darkviolet;
             }
             .navber {
                 display: flex;
@@ -94,7 +96,7 @@
                 margin: 0;
             }
             .ap-img {
-                width: 380px;
+                width: 300px;
             }
             .t-contents {
                 display: flex;
@@ -169,8 +171,10 @@
     <body>
         <div class="header">
             <img src="https://pds.exblog.jp/logo/1/201403/31/89/f032738920140401023009.jpg" alt="やまがくま" class="logo">
-            <p class="ict">3PGICT研修</p>
-            <h1 class="title">レスポンシブデザインを学ぼう!!!</h1>
+            <div class="head-texts">
+                <p class="ict">3PGICT研修</p>
+                <h1 class="title">レスポンシブデザインを学ぼう!!!</h1>
+            </div>
         </div>
         <div class="mokuji">
             <ul class="navber">
@@ -187,9 +191,9 @@
                     <a href="#media" class="location">メディアクエリとは？</a>
                 </li>
             </ul>
-            <ul class="navber"> 
+        
                 <li class="navber-item">
-                    <a href="#ipad" class="location">IPadでHTMLファイル修正方法</a>
+                    <a href="#ipad" class="location">HTMLファイル修正</a>
                 </li>
                 <li class="navber-item">
                     <a href="#jissen" class="location">レスポンシブの実践</a>
