@@ -173,75 +173,75 @@
             .question {
                 margin: 10px;
             }
+            /* ハンバーガーメニューのCSS作成 */
             .ham-nav {
-    position: fixed;
-    top: 24px;
-    width: 100%;
-    z-index: 10;
-}
-.header-menu {
-    height: 0;
-    overflow: hidden;
-    transition: .3s;
-    list-style:none;
-    background: thistle;
-    opacity: 0.9;
-}
-.ham-location{
-    padding: 10px;
-    font-size: 20px;
-    color: #464646;
-    display: block;
-    text-align: center;
-    text-decoration: none;
-}
-.hamburger {
-    position: fixed;
-    top: 32px;
-    right:32px;
-    cursor: pointer;
-    width: 32px;
-    height: 24px;
-    z-index: 10;
-}
-.hamburger span {
-    /*3本の線を作る*/
-    transition: all .3s;
-    position: absolute;
-    height: 2px;
-    background-color: #333;
-    width:100%;
-    z-index: 10;
-}
-.hamburger span:nth-of-type(1) {
-    /*上の線の位置*/
-    top: 4px;
-}
-.hamburger span:nth-of-type(2) {
-    /*真ん中の線の位置*/
-    top: 12px;
-}
-.hamburger span:nth-of-type(3) {
-    /*下の線の位置*/
-    top: 20px;
-}
-.hamburger.open span:nth-of-type(1) {
-    /*openのとき、上の線を右斜めにする*/
-    top: 10px;
-    transform: translateY(6px) rotate(-33deg);
-}
-.hamburger.open span:nth-of-type(2) {
-    /*真ん中の線を消す*/
-    opacity: 0;
-}
-.hamburger.open span:nth-of-type(3) {
-    top: 22px;
-    transform: translateY(-6px) rotate(33deg);
-}
-.hamburger {
-    display: none;
-}
-
+                position: fixed;
+                top: 24px;
+                width: 100%;
+                z-index: 10;
+            }
+            .header-menu {
+                height: 0;
+                overflow: hidden;
+                transition: .3s;
+                list-style:none;
+                background: thistle;
+                opacity: 0.9;
+            }
+            .ham-location{
+                padding: 10px;
+                font-size: 20px;
+                color: #464646;
+                display: block;
+                text-align: center;
+                text-decoration: none;
+            }
+            .hamburger {
+                position: fixed;
+                top: 32px;
+                right:32px;
+                cursor: pointer;
+                width: 32px;
+                height: 24px;
+                z-index: 10;
+            }
+            .hamburger span {
+                /*3本の線を作る*/
+                transition: all .3s;
+                position: absolute;
+                height: 2px;
+                background-color: #333;
+                width:100%;
+                z-index: 10;
+            }
+            .hamburger span:nth-of-type(1) {
+                /*上の線の位置*/
+                top: 4px;
+            }
+            .hamburger span:nth-of-type(2) {
+                /*真ん中の線の位置*/
+                top: 12px;
+            }
+            .hamburger span:nth-of-type(3) {
+                /*下の線の位置*/
+                top: 20px;
+            }
+            .hamburger.open span:nth-of-type(1) {
+                /*openのとき、上の線を右斜めにする*/
+                top: 10px;
+                transform: translateY(6px) rotate(-33deg);
+            }
+            .hamburger.open span:nth-of-type(2) {
+                /*真ん中の線を消す*/
+                opacity: 0;
+            }
+            .hamburger.open span:nth-of-type(3) {
+                top: 22px;
+                transform: translateY(-6px) rotate(33deg);
+            }
+            .hamburger {
+                display: none;
+            }
 
 
 
@@ -411,7 +411,7 @@
                 <p class="question">問3. 縦、横で切り替えた時に表示はどのようになりましたか？</p>
                 <button class="answer" value="3">回答例を見る</button>
                 <ul class="answer-list d-none">
-                    <li>横の時が綺麗でない表示になっている</li>
+                    <li>横の時が綺麗とは言えない表示になっている</li>
                     <li>見づらく、分かりにく表示である。</li>
                 </ul>
                 <p class="question">問4. どの様にすれば画面幅が変わっても綺麗になるでしょうか？</p>
@@ -499,7 +499,6 @@
         <div class="contents ouyou" id="ouyou">
             <h2>自由に編集</h2>
             <p><strong>実践6.</strong>自由に変更してみよう！</p>
-            <p></p>
         </div>
         <div class="contents furikaeri" id="furikaeri">
             <h2>授業の振り返り</h2>
