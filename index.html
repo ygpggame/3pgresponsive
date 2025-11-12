@@ -167,16 +167,94 @@
             .furikaeri {
                 background: darkseagreen;
             }
+            .ouyou {
+                background: aliceblue;
+            }
             .question {
                 margin: 10px;
             }
-            /* ①コメントアウト解除をする */
-            @media screen and (min-width: 1024px) {
+            .ham-nav {
+    position: fixed;
+    top: 24px;
+    width: 100%;
+    z-index: 10;
+}
+.header-menu {
+    height: 0;
+    overflow: hidden;
+    transition: .3s;
+    list-style:none;
+    background: thistle;
+    opacity: 0.9;
+}
+.ham-location{
+    padding: 10px;
+    font-size: 20px;
+    color: #464646;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+.hamburger {
+    position: fixed;
+    top: 32px;
+    right:32px;
+    cursor: pointer;
+    width: 32px;
+    height: 24px;
+    z-index: 10;
+}
+.hamburger span {
+    /*3本の線を作る*/
+    transition: all .3s;
+    position: absolute;
+    height: 2px;
+    background-color: #333;
+    width:100%;
+    z-index: 10;
+}
+.hamburger span:nth-of-type(1) {
+    /*上の線の位置*/
+    top: 4px;
+}
+.hamburger span:nth-of-type(2) {
+    /*真ん中の線の位置*/
+    top: 12px;
+}
+.hamburger span:nth-of-type(3) {
+    /*下の線の位置*/
+    top: 20px;
+}
+.hamburger.open span:nth-of-type(1) {
+    /*openのとき、上の線を右斜めにする*/
+    top: 10px;
+    transform: translateY(6px) rotate(-33deg);
+}
+.hamburger.open span:nth-of-type(2) {
+    /*真ん中の線を消す*/
+    opacity: 0;
+}
+.hamburger.open span:nth-of-type(3) {
+    top: 22px;
+    transform: translateY(-6px) rotate(33deg);
+}
+.hamburger {
+    display: none;
+}
+
+
+
+
+            /* 【実践２】コメントアウト解除をする ここから  */
+            /* １行下の【 /* 】を消す */
+            @media screen and (min-width: 1000px) {
                 .title {
                     margin-left: 140px;
+                    color: yellow;
                 }
                 .header {
                     width: 100%;
+                    background: #a50082;
                 }
                 .location {
                     font-size: 14px;
@@ -203,7 +281,22 @@
                     top: 80%;
                     background: wheat;
                 }
+            } 
+
+            /* 【実践3】コメントアウト解除をする  */
+             /* １行下の【 /* 】を消す */
+            @media screen and (max-width: 1000px) {
+                .navber {
+                    display: none;
+                }
+                .hamburger {
+                    display: block;
+                }
+                .title {
+                    color: yellow;
+                }
             }
+
         </style>
     </head>
     <body>
@@ -212,6 +305,39 @@
             <div class="head-texts">
                 <p class="ict">3PGICT研修</p>
                 <h1 class="title">レスポンシブデザインを学ぼう!!!</h1>
+            </div>
+            
+        </div>
+        <div class="hamburger-header">
+            <nav class="ham-nav">
+                <ul id="header-menu" class="header-menu">
+                    <li class="ham-li">
+                        <a href="#dunyuu" class="ham-location">授業の導入</a>
+                    </li>
+                    <li class="ham-li">
+                        <a href="#tateyoko" class="ham-location">縦横の切り替えの方法</a>
+                    </li>
+                    <li class="ham-li">
+                        <a href="#respo" class="ham-location">レスポンシブとは？</a>
+                    </li>
+                    <li class="ham-li">
+                        <a href="#media" class="ham-location">メディアクエリとは？</a>
+                    </li>
+                    <li class="ham-li">
+                        <a href="#ipad" class="ham-location">HTMLファイルの修正</a>
+                    </li>
+                    <li class="ham-li">
+                        <a href="#jissen" class="ham-location">レスポンシブの実践</a>
+                    </li>
+                    <li class="navber-item">
+                        <a href="#ouyou" class="ham-location">自由に編集</a>
+                    </li>
+                    <li class="navber-item">
+                        <a href="#furikaeri" class="ham-location">授業の振り返り</a>
+                    </li>
+            </nav>
+            <div id="hamburger" class="hamburger">
+                <span></span><span></span><span></span>
             </div>
         </div>
         <div class="mokuji">
@@ -248,7 +374,7 @@
         <div class="contents contents2" id="dunyuu">
             <h2 class="j-title">授業の導入</h2>
             <div class="content-body">
-                <p class="question">問1. 普段、皆さんは、WEBサイトを利用する時は、何を使って見るでしょうか？</p>
+                <p class="question"><strong>問1.</strong> 普段、皆さんは、WEBサイトを利用する時は、何を使って見るでしょうか？</p>
                 <button class="answer" value="1">回答例を見る</button>
                 <ul class="answer-list d-none ans-1">
                     <li>ノートパソコン</li>
@@ -257,7 +383,7 @@
                     <li>タブレット</li>
                     <li>その他（ゲーム機など）</li>
                 </ul>
-                <p class="question">問2. それぞれの画面サイズはどのようになっているでしょうか？</p>
+                <p class="question"><strong>問2. </strong>それぞれの画面サイズはどのようになっているでしょうか？</p>
                 <button class="answer" value="2">回答例を見る</button>
                 <ul class="answer-list d-none ans-2">
                     <li>画面サイズは、デバイスごとに異なる</li>
@@ -268,7 +394,7 @@
         <div class="tateyoko contents" id="tateyoko">
             <h2>このサイトの縦横を切り替えよう！</h2>
             <div class="content-body">
-                <p>実践1. このサイトを縦と横を見比べてみよう！</p> 
+                <p><strong>実践1. </strong>このサイトを縦と横を見比べてみよう！</p> 
                 <h3>縦横の切り替え方法</h3>
                 <p>右上の指でタッチして斜め下に降ろす。</p>
                 <div class="t-contents">
@@ -362,6 +488,18 @@
         </div>
         <div class="contents jissen" id="jissen">
             <h2>レスポンシブデザインを実践しよう</h2>
+            <p><strong>実践２.</strong>Liquid Logicでコードの250行目の【　/*　】と<br>284行目の【　*/ 】を消した後にPreviewを押してみよう!</p>
+            <p><strong>実践3.</strong>Liquid Logicでコードの288行目の【　/*　】と2<br>98行目の【　*/ 】を消した後にPreviewを押してみよう!</p>
+            <p><strong>実践4.</strong>Liquid Logicでコードの257行目.headerの<br>backgroundを【 #a50082 】から【　red　】に変更してみよう!</p>
+            <p><strong>実践5.</strong>Liquid Logicでコードの296行目.titleの<br>colorを【 yellow 】から【　black　】に変更してみよう!</p>
+            <a href="./restext.text" target="_blank">
+                <p>実践2~5を対応したサイト</p>
+            </a>
+        </div>
+        <div class="contents ouyou" id="ouyou">
+            <h2>自由に編集</h2>
+            <p><strong>実践6.</strong>自由に変更してみよう！</p>
+            <p></p>
         </div>
         <div class="contents furikaeri" id="furikaeri">
             <h2>授業の振り返り</h2>
@@ -379,6 +517,27 @@
                     answerLists[e.target.value - 1].classList.toggle("d-none");
                 });
             }
+            const menu = document.querySelector('#header-menu')
+            const btn = document.querySelector('#hamburger')
+
+            btn.addEventListener('click', () => {
+                btn.classList.toggle('open')
+                menu.classList.toggle('open')
+                if(menu.classList.contains("open")){
+                    menu.style.height = menu.scrollHeight + 'px'
+                }else{
+                    menu.style.height = "0"
+                }
+            })
+            menu.addEventListener('click', () => {
+                btn.classList.toggle('open')
+                menu.classList.toggle('open')
+                if(menu.classList.contains("open")){
+                    menu.style.height = menu.scrollHeight + 'px'
+                }else{
+                    menu.style.height = "0"
+                }
+            })
         </script>
     </body>
 </html>
