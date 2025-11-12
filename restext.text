@@ -245,9 +245,9 @@
 
 
 
-            /* 【実践２】コメントアウト解除をする ここから  */
+            /* 【実践２】 */
             /* １行下の【 /* 】を消す */
-            @media screen and (min-width: 1000px) {
+            /* @media screen and (min-width: 1000px) {
                 .title {
                     margin-left: 140px;
                     color: yellow;
@@ -281,11 +281,11 @@
                     top: 80%;
                     background: wheat;
                 }
-            } 
+            }  */
 
-            /* 【実践3】コメントアウト解除をする  */
+            /* 【実践3】*/
              /* １行下の【 /* 】を消す */
-            @media screen and (max-width: 1000px) {
+            /* @media screen and (max-width: 1000px) {
                 .navber {
                     display: none;
                 }
@@ -295,7 +295,7 @@
                 .title {
                     color: yellow;
                 }
-            }
+            } */
 
         </style>
     </head>
@@ -489,7 +489,7 @@
         <div class="contents jissen" id="jissen">
             <h2>レスポンシブデザインを実践しよう</h2>
             <p><strong>実践２.</strong>Liquid Logicでコードの250行目の【　/*　】と<br>284行目の【　*/ 】を消した後にPreviewを押してみよう!</p>
-            <p><strong>実践3.</strong>Liquid Logicでコードの288行目の【　/*　】と2<br>98行目の【　*/ 】を消した後にPreviewを押してみよう!</p>
+            <p><strong>実践3.</strong>Liquid Logicでコードの288行目の【　/*　】と<br>298行目の【　*/ 】を消した後にPreviewを押してみよう!</p>
             <p><strong>実践4.</strong>Liquid Logicでコードの257行目.headerの<br>backgroundを【 #a50082 】から【　red　】に変更してみよう!</p>
             <p><strong>実践5.</strong>Liquid Logicでコードの296行目.titleの<br>colorを【 yellow 】から【　black　】に変更してみよう!</p>
             <a href="./restext.text" target="_blank">
